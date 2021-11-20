@@ -3,7 +3,7 @@ import { Component, createResource, createSignal, lazy } from "solid-js";
 import Nav from "./Nav";
 
 const fetchProducts = () =>
-  fetch("https://fakestoreapi.com/products?limit=5").then((res) => res.json());
+  fetch("https://fakestoreapi.com/products?limit=15").then((res) => res.json());
 
 const fetchProduct = (id: string) => {
   console.log(id);
@@ -36,6 +36,10 @@ const App: Component = () => {
         const [products] = createResource(fetchProducts);
         return products;
       }
+    },
+    {
+      path: "/cart",
+      component: lazy(() => import("./pages/Cart")),
     }
   ];
 
