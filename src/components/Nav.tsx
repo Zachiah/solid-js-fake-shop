@@ -12,7 +12,7 @@ const Nav: Component = () => {
     }
   };
 
-  const [scrolled, setScrolled] = createSignal(false);
+  const [scrolled, setScrolled] = createSignal(window.scrollY > 0);
 
   window.addEventListener("scroll", handleScroll);
 
