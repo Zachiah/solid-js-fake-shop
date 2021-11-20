@@ -62,7 +62,7 @@ const Nav: Component = () => {
           class="duration-300 absolute"
           classList={{
             "w-full p-8 text-2xl text-center bg-gray-200 top-14": !scrolled(),
-            "left-0 top-0 p-4 w-34 text-center bg-gray-200": scrolled(),
+            "left-0 top-0 p-4 w-38 text-center bg-gray-200 h-14": scrolled(),
           }}
         >
           The Fake Shop
